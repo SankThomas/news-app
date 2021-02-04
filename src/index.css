@@ -11,6 +11,37 @@
   scroll-behavior: smooth;
 }
 
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: 'News Cycle', sans-serif;
+}
+
+.header-underline {
+  background-color: #0c0c36;
+  width: 100px;
+  height: 6px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+ul,
+ol,
+li,
+small {
+  color: #0c0c36;
+}
+
+.delete-btn {
+  background-color: #0c0c36;
 }
