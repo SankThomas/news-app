@@ -25,3 +25,16 @@ More information will be added as the application continues to come together.
 ## Features
 
 1. Search form to search for articles
+
+## How to run
+
+1. Clone the repository using `git clone *LINK TO REPO*` or download the zip file.
+2. Open up the cloned/extracted folder in your code editor and run `npm install` to install `node_modules`.
+3. Register for an API key from News API and then create a `.env` file in the root of your workspace.
+4. Inside the `.env` file, paste the following: `REACT_APP_NEWS_API_KEY=YOUR_API_KEY` and then replace `YOUR_API_KEY` with your actual API key.
+5. Spin up your development server by running `npm start` in your terminal.
+6. Your dev server will open up on `http://localhost:3000` if there is nothing else running on that port, and you should be able to see some articles as well as perform searches.
+
+# NOTE:
+
+Do NOT push your API key to GitHub. Avoid this by confirming that your `.env` file is included in your `.gitignore` file. If you have cloned this repo, then it is already included, but always confirm.
