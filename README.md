@@ -14,7 +14,14 @@
 3. Still in development so there is no live demo.
 4. Uses `axios` to fetch data because it is more secure than the fetch API.
 5. `momentjs` to format the dates on the articles.
+
+### Optional
+
 6. `react-icons` for icons in the application.
 7. `react-router-dom` to handle our internal routing.
 
 More information will be added as the application continues to come together.
+
+## Features
+
+1. Search form to search for articles
