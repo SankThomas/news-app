@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import { FcSportsMode } from 'react-icons/fc'
 import axios from 'axios'
 import moment from 'moment'
-import { FcSportsMode } from 'react-icons/fc'
+import loading from '../loading.gif'
 
 const Sports = () => {
   const [cards, setCards] = useState([])
@@ -35,9 +36,9 @@ const Sports = () => {
       <div className="header-underline mx-auto"></div>
 
       {isLoading ? (
-        <h1 className="text-center mt-32 text-8xl font-bold">Loading...</h1>
+        <img src={loading} alt="Loading..." className="block mx-auto" />
       ) : (
-        <section className="p-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-4">
+        <section className="p-10 grid grid-cols-1 gap-10 xl:grid-cols-2 xl:gap-4">
           {cards.map((card) => {
             const {
               source: { name },
@@ -83,7 +84,7 @@ const Sports = () => {
                   </div>
                   <button
                     onClick={() => removeCard(title)}
-                    className="delete-btn text-white py-2 px-4 border border-4 border-white mt-5"
+                    className="delete-btn text-white py-2 px-4 border-4 border-white mt-5"
                   >
                     Not Interested
                   </button>

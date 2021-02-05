@@ -68,6 +68,7 @@ const FetchArticles = () => {
                     src={urlToImage}
                     alt={name}
                     className="rounded-t-lg w-full md:h-full md:rounded-t-none md:rounded-l-lg"
+                    loading="lazy"
                   />
                 </div>
 

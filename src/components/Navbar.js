@@ -13,11 +13,7 @@ const Navbar = () => {
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/sports"
-              className="text-black py-2 px-4"
-              activeClassName="bg-red-500"
-            >
+            <NavLink to="/sports" className="text-black py-2 px-4">
               Sports
             </NavLink>
           </li>
