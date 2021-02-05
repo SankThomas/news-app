@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
+import SearchForm from './SearchForm'
 import axios from 'axios'
 import moment from 'moment'
+import loading from '../loading.gif'
 
 const FetchArticles = () => {
   const [articles, setArticles] = useState([])
@@ -32,17 +34,22 @@ const FetchArticles = () => {
 
   return (
     <>
-      <h1 className="font-bold text-4xl text-center px-5 pt-5">
-        Browse The Latest News Articles
-      </h1>
-      <p className="font-bold text-center text-xl">
-        There are {articles.length} articles on this page
-      </p>
-      <div className="header-underline mx-auto"></div>
+      <section className="showcase">
+        <div className="overlay py-20">
+          <h1 className="font-bold text-4xl text-center text-white px-5 pt-5 capitalize lg:text-6xl">
+            Latest articles about {term}
+          </h1>
+          <p className="font-bold text-center text-xl text-white lg:text-2xl">
+            There are {articles.length} articles on this page
+          </p>
+          <div className="showcase-underline mx-auto"></div>
+          <SearchForm searchText={(text) => setTerm(text)} />
+        </div>
+      </section>
       {isLoading ? (
-        <h1 className="text-center mt-32 text-8xl font-bold">Loading...</h1>
+        <img src={loading} alt="Loading..." className="block mx-auto" />
       ) : (
-        <section className="p-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-4">
+        <section className="p-10 grid grid-cols-1 gap-10 xl:grid-cols-2 lg:gap-4">
           {articles.map((article, index) => {
             const {
               source: { name },

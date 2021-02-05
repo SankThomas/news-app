@@ -27,6 +27,14 @@ body {
   margin-bottom: 20px;
 }
 
+.showcase-underline {
+  background-color: #fff;
+  width: 100px;
+  height: 6px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
 h1,
 h2,
 h3,
@@ -44,4 +52,12 @@ small {
 
 .delete-btn {
   background-color: #0c0c36;
+}
+
+.showcase {
+  background: url('./showcase.jpeg') no-repeat center/cover;
+}
+
+.showcase .overlay {
+  background-color: hsla(240, 64%, 13%, 40%);
 }
