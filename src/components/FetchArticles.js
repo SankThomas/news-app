@@ -12,9 +12,10 @@ const FetchArticles = () => {
     const fetchArticleData = async () => {
       try {
         const response = await axios.get(
-          `http://newsapi.org/v2/everything?q=${term}&from=2021-01-04&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
+          `https://newsapi.org/v2/everything?q=${term}&from=2021-01-04&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS_API_KEY}`
         )
         setArticles(response.data.articles)
+        console.log(response.data.articles)
         setIsLoading(false)
       } catch (error) {
         console.error(error)
@@ -42,7 +43,7 @@ const FetchArticles = () => {
         <h1 className="text-center mt-32 text-8xl font-bold">Loading...</h1>
       ) : (
         <section className="p-10 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-4">
-          {articles.map((article) => {
+          {articles.map((article, index) => {
             const {
               source: { name },
               author,
@@ -54,7 +55,7 @@ const FetchArticles = () => {
             } = article
 
             return (
-              <article key={title} className="md:grid md:grid-cols-2">
+              <article key={index} className="md:grid md:grid-cols-2">
                 <div>
                   <img
                     src={urlToImage}
@@ -87,7 +88,7 @@ const FetchArticles = () => {
                   </div>
                   <button
                     onClick={() => removeArticle(title)}
-                    className="delete-btn text-white py-2 px-4 border border-4 border-white mt-5"
+                    className="delete-btn text-white py-2 px-4 border-4 border-white mt-5"
                   >
                     Not Interested
                   </button>
