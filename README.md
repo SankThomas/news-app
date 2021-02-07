@@ -38,3 +38,7 @@ More information will be added as the application continues to come together.
 # NOTE:
 
 Do NOT push your API key to GitHub. Avoid this by confirming that your `.env` file is included in your `.gitignore` file. If you have cloned this repo, then it is already included, but always confirm.
+
+# Update
+
+I'm thinking about using another API to get the news articles because News API is not served over `https` which poses both a security risk as well as a challenge when deploying to Netlify.
