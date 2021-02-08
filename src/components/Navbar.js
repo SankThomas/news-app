@@ -17,6 +17,11 @@ const Navbar = () => {
               Sports
             </NavLink>
           </li>
+          <li>
+            <NavLink to="/books" className="text-black py-2 px-4">
+              Books
+            </NavLink>
+          </li>
         </ul>
       </nav>
       <div></div>
